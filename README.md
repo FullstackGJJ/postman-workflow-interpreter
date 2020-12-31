@@ -12,14 +12,23 @@
 
 _getCollection :: [Request] -> Authorization -> PrerequestScript -> Tests -> Collection_
 
-_interpret :: Collection -> Environment -> Environment -> (Environment, Report)_
+_interpret :: Collection -> Request -> Environment -> Environment -> (Environment, Report)_
+
 
 ```
-Law: "interpret collection complete"
+Law: "interpret collection completion step"
 Forall: (c :: Collection), (r: Request), (e : Environment), (a: Authorization), (p: PrerequestScript), (t: Tests), (v: Variables), (re: Report).
 
-interpret c e e = (e, re)
+interpret c r e e = (e, re)
 ```
+
+```
+Law: "interpret collection starting/intermediate step"
+Forall: (c :: Collection), (r: Request), (e : Environment), (a: Authorization), (p: PrerequestScript), (t: Tests), (v: Variables), (re: Report).
+
+interpret c r e e = interpret c r' e e
+```
+
 
 **data** Method
 
