@@ -8,11 +8,11 @@
 
 **data** Request
 
-**data** Result
+**data** Report
 
-_getCollection :: [Request] -> Authorization -> PrerequestScript -> Tests -> Collection_
+getCollection :: [Request] -> Authorization -> PrerequestScript -> Tests -> Collection
 
-_interpret :: Collection -> Environment -> Environment -> (Environment, Result)_
+interpret :: Collection -> Environment -> Environment -> (Environment, Report)
 
 ```
 Law: "interpret collection"
@@ -39,6 +39,6 @@ interpret c e e = interpret (getCollection [r] a p t v) e e
 
 **data** Settings
 
-_getRequest :: Method -> Url -> Params -> Authorization -> Headers -> Body -> PrerequestScript -> Tests -> Settings -> Request_
+getRequest :: Method -> Url -> Params -> Authorization -> Headers -> Body -> PrerequestScript -> Tests -> Settings -> Request
 
-_getRequestFields :: Request -> (Method, Url, Params, Authorization, Headers, Body, PrerequestScript, Tests, Settings)_
+getRequestFields :: Request -> (Method, Url, Params, Authorization, Headers, Body, PrerequestScript, Tests, Settings)
