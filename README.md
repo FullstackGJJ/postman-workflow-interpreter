@@ -15,10 +15,10 @@ _getCollection :: [Request] -> Authorization -> PrerequestScript -> Tests -> Col
 _interpret :: Collection -> Environment -> Environment -> (Environment, Report)_
 
 ```
-Law: "interpret collection"
-Forall: (c :: Collection), (r: Request), (e : Environment), (a: Authorization), (p: PrerequestScript), (t: Tests), (v: Variables).
+Law: "interpret collection complete"
+Forall: (c :: Collection), (r: Request), (e : Environment), (a: Authorization), (p: PrerequestScript), (t: Tests), (v: Variables), (re: Report).
 
-interpret c e e = interpret (getCollection [r] a p t v) e e
+interpret c e e = (e, re)
 ```
 
 **data** Method
