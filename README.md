@@ -8,9 +8,11 @@
 
 **data** Request
 
+**data** Result
+
 getCollection :: [Request] -> Authorization -> PrerequestScript -> Tests -> Collection
 
-interpret :: Collection -> Environment -> Environment -> Environment
+interpret :: Collection -> Environment -> Environment -> (Environment, Result)
 
 ```
 Law: "interpret collection"
