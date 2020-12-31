@@ -26,9 +26,9 @@ interpret c r e e = (e, re)
 Law: "interpret collection starting/intermediate step"
 Forall: (c :: Collection), (r: Request), (e : Environment), (a: Authorization), (p: PrerequestScript), (t: Tests), (v: Variables), (re: Report).
 
-interpret c r e e = interpret c r' e e
+interpret c r e e = interpret c *r e e
 ```
-
+<sub>* with r being the next request in sequence</sub>
 
 **data** Method
 
