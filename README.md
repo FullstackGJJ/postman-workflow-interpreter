@@ -29,6 +29,7 @@ Forall: (c :: Collection), (r: Request), (e : Environment), (a: Authorization), 
 interpret c r e e re = (e, **re)
 ```
 <sub>* with r being the next request in sequence</sub>
+
 <sub>** with re being the final completed report</sub>
 
 **data** Method
