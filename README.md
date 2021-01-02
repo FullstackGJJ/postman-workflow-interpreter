@@ -16,7 +16,7 @@ _interpret :: Collection -> Request -> Environment -> Environment -> (Environmen
 
 
 ```
-Law: "interpret collection starting/intermediate step"
+Law: "interpret collection starting and intermediate step"
 Forall: (c :: Collection), (r: Request), (e : Environment), (a: Authorization), (p: PrerequestScript), (t: Tests), (v: Variables), (re: Report).
 
 interpret c r e e re = interpret c *r e e re
