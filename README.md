@@ -10,9 +10,9 @@
 
 **data** Report
 
-_stringToCollection :: String -> Collection_
+_stringToCollection :: String -> Option(Collection)_
 
-_stringToEnvironment :: String -> Environment_
+_stringToEnvironment :: String -> Option(Environment)_
 
 _getCollection :: [Request] -> Authorization -> PrerequestScript -> Tests -> Collection_
 
