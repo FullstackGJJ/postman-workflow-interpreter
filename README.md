@@ -10,6 +10,10 @@
 
 **data** Report
 
+_stringToCollection :: String -> Collection_
+
+_stringToEnvironment :: String -> Environment_
+
 _getCollection :: [Request] -> Authorization -> PrerequestScript -> Tests -> Collection_
 
 _interpret :: Collection -> Request -> Environment -> Environment -> (Environment, Report)_
